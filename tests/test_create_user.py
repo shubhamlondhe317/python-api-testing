@@ -13,7 +13,7 @@ def start_exec():
     global file
     file = open("/Users/shubhamlondhe/Downloads/CreateUser.json", "r")
 
-@pytest.mark.Smoke
+@pytest.mark.Regression
 def test_create_new_user(start_exec):
     json_input = file.read()
     request_json = json.loads(json_input)
@@ -29,7 +29,7 @@ def test_create_new_user(start_exec):
     # id = jsonpath.jsonpath(response_json,'id')
     # print(id[0])
 
-@pytest.mark.Sanity
+@pytest.mark.SVT
 def test_create_other_user(start_exec):
     json_input = file.read()
     request_json = json.loads(json_input)
