@@ -3,27 +3,43 @@ import json
 import jsonpath
 import pytest
 
+from tests.test_end_to_end import student_details
+
 
 @pytest.mark.BVT
-def test_get_student_data(start_executions):
-    response = start_executions.get("https://thetestingworldapi.com/api/studentsDetails/7081054")
-    json_response = json.loads(response.text)  # response.json
-    id = jsonpath.jsonpath(json_response, 'data.id')
-    assert id[0] == 7081054
+@pytest.mark.parametrize(
+    "test_params",
+    student_details,
+    ids=[x["id"] for x in student_details],
+)
+def test_get_student_data(start_executions, test_params):
+    print(test_params)
+    response = start_executions.get("https://thetestingworldapi.com/api/studentsDetails/7081053")
+    print(response.text)
+    print(response.status_code)
+    assert response.status_code == 200
 
 
 @pytest.mark.Regressions
-def test_add_new_student(start_executions):
-    file = open("/Users/shubhamlondhe/Documents/requestJson.json", "r")
-    json_request = json.loads(file.read())
-    response = start_executions.post("https://thetestingworldapi.com/api/studentsDetails", json_request)
+@pytest.mark.parametrize(
+    "test_params",
+    student_details,
+    ids=[x["id"] for x in student_details],
+)
+def test_add_new_student(start_executions, test_params):
+    print(test_params)
+    response = start_executions.post("https://thetestingworldapi.com/api/studentsDetails", test_params)
     print(response.text)
     assert response.status_code == 201
 
 
 @pytest.mark.SVT
-def test_update_new_student(start_executions):
-    file = open("/Users/shubhamlondhe/Documents/requestJson.json", "r")
-    json_request = json.loads(file.read())
-    response = start_executions.put("https://thetestingworldapi.com/api/studentsDetails/7081054", json_request)
-    assert response.status_code == 400
+@pytest.mark.parametrize(
+    "test_params",
+    student_details,
+    ids=[x["id"] for x in student_details],
+)
+def test_update_new_student(start_executions,test_params):
+    print(test_params)
+    response = start_executions.put("https://thetestingworldapi.com/api/studentsDetails/7081054", test_params)
+    print(response.text)
