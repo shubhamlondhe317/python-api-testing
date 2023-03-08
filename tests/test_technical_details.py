@@ -3,6 +3,9 @@ import pytest
 from lib.utils import load_params
 
 student_technical_details = load_params("student_technical_details.yaml")
+print(student_technical_details)
+
+
 @pytest.mark.SVT
 @pytest.mark.parametrize(
     "test_params",

@@ -1,6 +1,3 @@
-import json
-
-import jsonpath
 import pytest
 
 from tests.test_end_to_end import student_details
@@ -12,9 +9,9 @@ from tests.test_end_to_end import student_details
     student_details,
     ids=[x["id"] for x in student_details],
 )
-def test_get_student_data(start_executions, test_params):
+def test_get_student_data(start_executions, test_params, api_url):
     print(test_params)
-    response = start_executions.get("https://thetestingworldapi.com/api/studentsDetails/7081053")
+    response = start_executions.get(api_url + "/api/studentsDetails/7081053")
     print(response.text)
     print(response.status_code)
     assert response.status_code == 200
@@ -26,9 +23,9 @@ def test_get_student_data(start_executions, test_params):
     student_details,
     ids=[x["id"] for x in student_details],
 )
-def test_add_new_student(start_executions, test_params):
+def test_add_new_student(start_executions, test_params, api_url):
     print(test_params)
-    response = start_executions.post("https://thetestingworldapi.com/api/studentsDetails", test_params)
+    response = start_executions.post(api_url + "/api/studentsDetails", test_params)
     print(response.text)
     assert response.status_code == 201
 
@@ -39,7 +36,7 @@ def test_add_new_student(start_executions, test_params):
     student_details,
     ids=[x["id"] for x in student_details],
 )
-def test_update_new_student(start_executions,test_params):
+def test_update_new_student(start_executions, test_params, api_url):
     print(test_params)
-    response = start_executions.put("https://thetestingworldapi.com/api/studentsDetails/7081054", test_params)
+    response = start_executions.put(api_url+"/api/studentsDetails/7081054", test_params)
     print(response.text)

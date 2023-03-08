@@ -14,9 +14,9 @@ print("************")
     student_details,
     ids=[x["id"] for x in student_details],
 )
-def test_add_new_data(start_executions, test_params):
+def test_add_new_data(start_executions, test_params, api_url):
     print(test_params)
-    response = start_executions.post("https://thetestingworldapi.com/api/studentsDetails", test_params)
+    response = start_executions.post(api_url+"/api/studentsDetails", test_params)
     print(response.text)
     id = jsonpath.jsonpath(response.json(), 'id')
     print(id[0])
