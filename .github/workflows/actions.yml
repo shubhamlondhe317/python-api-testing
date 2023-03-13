@@ -72,7 +72,15 @@ jobs:
       - name: Generate allure report
         run: |
           pytest -s -v tests/ --alluredir=allure-report
-          allure serve allure-report
+#          allure serve allure-report
+
+      - name: Prepare report
+        uses: Xotabu4/send-to-allure-server-action@1
+        id: allure-report
+        # always() needed because we want report for failed tests as well
+        if: ${{ always() }}
+        with:
+          allure-server-url: 'http://<allure-server-ip>:8080/'
 
 #      - name: Get Allure history
 #        uses: actions/checkout@v2
