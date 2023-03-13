@@ -27,7 +27,7 @@ def test_add_new_student(start_executions, test_params, base_url):
     print(test_params)
     response = start_executions.post(base_url + "/api/studentsDetails", test_params)
     print(response.text)
-    assert response.status_code == 500
+    assert response.status_code == 201
 
 
 @pytest.mark.SVT
