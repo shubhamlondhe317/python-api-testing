@@ -48,7 +48,7 @@ jobs:
       - name: run test cases
         run: |
           pytest -v -s tests/
-<<<<<<< HEAD
+
 
   allure-report:
     runs-on: ubuntu-latest
