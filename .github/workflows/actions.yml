@@ -69,32 +69,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Test
-        if: always()
-        run: python -m pytest --alluredir=allure-results
-        continue-on-error: true
-
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
+      - name: Prepare report
+        uses: Xotabu4/send-to-allure-server-action@1
+        id: allure-report
+          # always() needed because we want report for failed tests as well
+        if: ${{ always() }}
         with:
-          ref: gh-pages
-          path: gh-pages
+          allure-server-url: 'http://<allure-server-ip>:8080/'
 
-      - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        with:
-          allure_results: allure-results
-          allure_history: allure-history
-
-      - name: Deploy report to Github Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+      - name: Get date
+        id: date
+        if: ${{ always() }}
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d-%T')"
 
     
