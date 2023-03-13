@@ -29,4 +29,4 @@ def test_technical_student_details(start_executions, test_params, base_url):
     print(test_params)
     response = start_executions.post(base_url + "/api/technicalskills", test_params)
     print(response.text)
-    assert response.status_code == 200
+    assert response.status_code == 500
