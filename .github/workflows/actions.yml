@@ -69,3 +69,4 @@ jobs:
       - name: generate allure report
         run: |
           pytest -s -v tests/ --alluredir=reports
+          allure serve reports/
