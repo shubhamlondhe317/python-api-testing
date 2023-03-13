@@ -70,7 +70,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Generate allure report
-        run:  pytest -s -v tests/ --alluredir=allure-report
+        run: |
+          pytest -s -v tests/ --alluredir=allure-report
+          allure serve allure-report
 
 #      - name: Get Allure history
 #        uses: actions/checkout@v2
