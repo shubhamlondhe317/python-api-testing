@@ -40,4 +40,3 @@ def test_update_new_student(start_executions, test_params, base_url):
     print(test_params)
     response = start_executions.put(base_url+"/api/studentsDetails/7081054", test_params)
     print(response.text)
-    print("Awadh")
