@@ -3,7 +3,7 @@ import pytest
 from lib.utils import load_params
 
 student_technical_details = load_params("student_technical_details.yaml")
-print(student_technical_details)
+# print(student_technical_details)
 
 
 @pytest.mark.SVT
@@ -15,7 +15,7 @@ print(student_technical_details)
 def test_get_technical_student_details(start_executions, test_params, base_url):
     print(test_params)
     response = start_executions.get(base_url + "/api/technicalskills")
-    print(response.text)
+    # print(response.text)
     assert response.status_code == 200
 
 
