@@ -74,13 +74,13 @@ jobs:
         run: pytest -s -v tests/ --alluredir=allure-report
         continue-on-error: true
 
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
+#      - name: Get Allure history
+#        uses: actions/checkout@v2
+#        if: always()
+#        continue-on-error: true
+#        with:
+#          ref: gh-pages
+#          path: gh-pages
 
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
