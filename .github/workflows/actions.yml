@@ -71,7 +71,7 @@ jobs:
 
       - name: Run Test
         if: always()
-        run: pytest --alluredir=allure-report
+        run: pytest -s -v tests/ --alluredir=allure-report
         continue-on-error: true
 
       - name: Get Allure history
