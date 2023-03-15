@@ -54,8 +54,10 @@ jobs:
 
     runs-on: ubuntu-latest
     needs: [ run-test ]
-    run:
-      working-directory: ./new test cases
+
+    defaults:
+      run:
+        working-directory: ./new test cases
 
     steps:
       - name: Check out code
