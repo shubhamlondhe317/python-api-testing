@@ -1,7 +1,7 @@
 name: Run tests using github actions
 on:
   push:
-    branches: [branchWithactions]
+    branches: [pytest-framework]
 
   workflow_dispatch:
 
