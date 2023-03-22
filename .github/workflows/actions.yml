@@ -1,4 +1,4 @@
-name: Run tests using github actions
+name: Run tests using github actions and create allure reports
 on:
   push:
     branches: [pytest-framework]
