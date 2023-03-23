@@ -1,4 +1,4 @@
-name: Self-hosted runners
+name: self hosted runner
 on:
   push:
     branches: [pytest-framework]
@@ -9,10 +9,10 @@ jobs:
 
   Build:
 
-    runs-on: self-hosted  # ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
 
     steps:
 
