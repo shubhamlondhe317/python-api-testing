@@ -1,4 +1,4 @@
-name: actions.yml workflow
+name: allure with github actions
 on:
   push:
     branches: [branchWithactions]
