@@ -1,4 +1,4 @@
-name: Run tests using github actions and create allure reports
+name: Self-hosted runners
 on:
   push:
     branches: [pytest-framework]
@@ -9,7 +9,7 @@ jobs:
 
   Build:
 
-    runs-on: ubuntu-latest
+    runs-on: macbook-laptop  # ubuntu-latest
     strategy:
       matrix:
         python-version: [3.8]
