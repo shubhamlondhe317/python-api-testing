@@ -30,7 +30,7 @@ jobs:
           pip install -r requirements.txt
   run-test:
 
-    runs-on: ubuntu-latest
+    runs-on: macbook-laptop # ubuntu-latest
     needs:  [ Build ]
 
     steps:
@@ -51,7 +51,7 @@ jobs:
           pytest -v -s tests/
   allure-report:
 
-    runs-on: ubuntu-latest
+    runs-on: macbook-laptop # ubuntu-latest
     needs: [ run-test ]
 
     steps:
