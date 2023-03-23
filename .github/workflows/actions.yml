@@ -9,7 +9,7 @@ jobs:
 
   Build:
 
-    runs-on: macbook-laptop  # ubuntu-latest
+    runs-on: self-hosted  # ubuntu-latest
     strategy:
       matrix:
         python-version: [3.8]
@@ -30,7 +30,7 @@ jobs:
           pip install -r requirements.txt
   run-test:
 
-    runs-on: macbook-laptop # ubuntu-latest
+    runs-on: ubuntu-latest
     needs:  [ Build ]
 
     steps:
@@ -51,7 +51,7 @@ jobs:
           pytest -v -s tests/
   allure-report:
 
-    runs-on: macbook-laptop # ubuntu-latest
+    runs-on: ubuntu-latest
     needs: [ run-test ]
 
     steps:
