@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Mar 23 10:46:57 GMT 2023","Thu Mar 23 10:46:58 GMT 2023","235","tests","test_end_to_end","","","","test_add_new_data[7081053]",""
+"passed","Thu Mar 23 10:46:59 GMT 2023","Thu Mar 23 10:46:59 GMT 2023","234","tests","test_technical_details","","","","test_technical_student_details[7159566]",""
+"passed","Thu Mar 23 10:46:57 GMT 2023","Thu Mar 23 10:46:57 GMT 2023","232","tests","test_add_new_student","","","","test_update_new_student[7081053]",""
+"passed","Thu Mar 23 10:46:56 GMT 2023","Thu Mar 23 10:46:57 GMT 2023","1260","tests","test_add_new_student","","","","test_get_student_data[7081053]",""
+"passed","Thu Mar 23 10:46:57 GMT 2023","Thu Mar 23 10:46:57 GMT 2023","236","tests","test_add_new_student","","","","test_add_new_student[7081053]",""
+"passed","Thu Mar 23 10:46:58 GMT 2023","Thu Mar 23 10:46:59 GMT 2023","1173","tests","test_technical_details","","","","test_get_technical_student_details[7159566]",""
