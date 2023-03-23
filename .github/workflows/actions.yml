@@ -9,7 +9,7 @@ jobs:
 
   Build:
 
-    runs-on: IB-Pune-MAC-007  # ubuntu-latest
+    runs-on: self-hosted  # ubuntu-latest
     strategy:
       matrix:
         python-version: [3.8]
