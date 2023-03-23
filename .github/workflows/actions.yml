@@ -1,4 +1,4 @@
-name: allure with github actions
+name: self hosted runner with github actions
 on:
   push:
     branches: [branchWithactions]
