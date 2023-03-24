@@ -1,4 +1,4 @@
-name: self hosted runner with github action
+name: cron job
 on:
  push:
    branches: [ branchWithactions ]
