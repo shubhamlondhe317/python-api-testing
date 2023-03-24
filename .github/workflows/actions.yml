@@ -1,4 +1,4 @@
-name: self hosted runner with github actions
+name: self hosted runner with github action
 on:
  push:
    branches: [ branchWithactions ]
