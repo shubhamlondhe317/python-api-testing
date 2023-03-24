@@ -1,4 +1,4 @@
-name: self hosted runner
+name: self hosted runner with git-hub actions
 on:
   push:
     branches: [pytest-framework]
