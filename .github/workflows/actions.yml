@@ -28,6 +28,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
   run-test:
 
     runs-on: ubuntu-latest
@@ -46,9 +47,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
       - name: run test cases
         run: |
           pytest -v -s tests/
+
   allure-report:
 
     runs-on: ubuntu-latest
@@ -67,6 +70,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
       - name: Run Test
         if: always()
         run: python -m pytest --alluredir=allure-results
