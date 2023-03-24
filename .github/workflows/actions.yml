@@ -1,10 +1,9 @@
 name: self hosted runner with github actions
 on:
+  push:
+    branches: [ branchWithactions ]
   schedule:
-    - cron: "*/2 * * * *"
-#  push:
-#    branches: [branchWithactions]
-
+    - cron: '2 * * * *'
 
   workflow_dispatch:
 
