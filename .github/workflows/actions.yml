@@ -30,6 +30,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: run test cases
+        run: |
+          pytest -v -s tests/
+
   run-test:
 
     runs-on: self-hosted
@@ -49,9 +53,9 @@ jobs:
 #          python -m pip install --upgrade pip
 #          pip install -r requirements.txt
 #
-      - name: run test cases
-        run: |
-          pytest -v -s tests/
+#      - name: run test cases
+#        run: |
+#          pytest -v -s tests/
 #
 #  allure-report:
 #
