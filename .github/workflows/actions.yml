@@ -34,12 +34,12 @@ jobs:
         run: |
           pytest -v -s tests/
 
-  run-test:
-
-    runs-on: self-hosted
-    needs:  [ Build ]
-
-    steps:
+#  run-test:
+#
+#    runs-on: self-hosted
+#    needs:  [ Build ]
+#
+#    steps:
 #      - name: Check out code
 #        uses: actions/checkout@master
 #
