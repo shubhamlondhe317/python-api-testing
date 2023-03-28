@@ -1,4 +1,4 @@
-name: By using github actions add self hosted runner
+name: Adding AWS as self hosted runner
 on:
   push:
     branches: [pytest-framework]
