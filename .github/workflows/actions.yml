@@ -50,7 +50,7 @@ jobs:
 
       - name: run test cases
         run: |
-          pytest -v -s tests/
+          pytest -s -v tests/
 
   allure-report:
 

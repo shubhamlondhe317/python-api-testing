@@ -16,12 +16,8 @@ print("************")
 )
 def test_add_new_data(start_executions, test_params, base_url):
     print(test_params)
-    response = start_executions.post(base_url+"/api/studentsDetails", test_params)
+    response = start_executions.post(base_url + "/api/studentsDetails", test_params)
     print(response.text)
     id = jsonpath.jsonpath(response.json(), 'id')
     print(id[0])
     assert response.status_code == 201
-
-
-
-
