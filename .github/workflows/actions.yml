@@ -7,7 +7,7 @@ on:
 
 jobs:
 
-  Build:
+  run-python-tests:
 
     runs-on: ubuntu-latest
     strategy:
@@ -31,7 +31,7 @@ jobs:
 
       - name: run test cases
         run: |
-          pytest -v -s tests/
+          pytest -v -s tests/--alluredir=allure-results
 
 #  run-test:
 #
