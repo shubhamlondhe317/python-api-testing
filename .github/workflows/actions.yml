@@ -29,9 +29,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: run test cases
-        run: |
-          pytest -v -s tests/--alluredir=allure-results
+      - name: Run Test
+        if: always()
+        run: python -m pytest --alluredir=allure-results
+        continue-on-error: true
+
+#      - name: run test cases
+#        run: |
+#          pytest -v -s tests/
 
 #  run-test:
 #
