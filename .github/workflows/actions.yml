@@ -1,8 +1,8 @@
 name: self hosted runner with github action
-on:
- push:
-   branches: [ branchWithactions ]
- workflow_dispatch:
+on: workflow_dispatch 
+# push:
+#   branches: [ branchWithactions ]
+ workflow_dispatch
 
 jobs:
 
