@@ -8,7 +8,7 @@ jobs:
 
   run-python-tests:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
         python-version: [3.8]
