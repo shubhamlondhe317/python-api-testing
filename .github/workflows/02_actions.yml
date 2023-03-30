@@ -1,4 +1,4 @@
-name: Adding Multiple Workflows
+name: Adding Multiple Workflows 02
 on:
   push:
     branches: [pytest-framework]
@@ -9,7 +9,7 @@ jobs:
 
   Build:
 
-    runs-on: self-hosted
+    runs-on: ["self-hosted", "test"]
     strategy:
       matrix:
         python-version: [3.8]

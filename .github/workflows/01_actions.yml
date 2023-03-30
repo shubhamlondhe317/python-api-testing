@@ -1,4 +1,4 @@
-name: Adding Multiple Workflows
+name: Adding Multiple Workflows 01
 on:
   push:
     branches: [pytest-framework]
