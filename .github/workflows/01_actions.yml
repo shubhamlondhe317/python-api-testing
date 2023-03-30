@@ -9,7 +9,7 @@ jobs:
 
   Build:
 
-    runs-on: self-hosted
+    runs-on: ["self-hosted", "test1"]
     strategy:
       matrix:
         python-version: [3.8]
