@@ -55,7 +55,7 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
 
-      - name: Trigger next workflows
+      - name: Trigger next workflow
         if: success()
         uses: peter-evans/repository-dispatch@v1
         with:
