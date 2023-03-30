@@ -1,4 +1,4 @@
-name: self hosted runner with github actionsCopy2
+name: actionsCopy2.yml
 on:
  push:
    branches: [ branchWithactions ]
