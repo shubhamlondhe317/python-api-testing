@@ -1,7 +1,7 @@
 name: actionsCopy1.yml
 on:
- push:
-   branches: [ branchWithactions ]
+  repository_dispatch:
+    types: [ trigger-workflow-2 ]
 
 jobs:
 
