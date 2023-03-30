@@ -1,7 +1,5 @@
 name: actions.yml
-on:
- push:
-   branches: [ branchWithactions ]
+on: [push, workflow_dispatch]
 
 jobs:
 
