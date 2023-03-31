@@ -1,9 +1,10 @@
 name: Adding AWS as self hosted runner
 on:
-  [push, workflow_dispatch]:
-    branches: [pytest-framework]
-
-  workflow_dispatch:
+  [push, workflow_dispatch]
+#  push:
+#    branches: [pytest-framework]
+#
+#  workflow_dispatch:
 
 jobs:
 
