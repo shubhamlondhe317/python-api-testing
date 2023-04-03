@@ -29,7 +29,7 @@ jobs:
             pytest -v -s tests/
         
         - name: upload artifact
-          user: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v3
           with:
             name: req-file
             run: |
