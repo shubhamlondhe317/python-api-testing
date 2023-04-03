@@ -1,5 +1,5 @@
 name: actions.yml
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 
 jobs:
 
