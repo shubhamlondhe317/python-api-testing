@@ -34,9 +34,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifact-files
-          path: |
-            dist
-            package.json  
+          path: dist
+#          path: |
+#            dist
+#            package.json
       
 
   run-test:
