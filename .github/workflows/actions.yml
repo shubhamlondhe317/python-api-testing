@@ -59,6 +59,15 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
 
+  download-artifact:
+    needs: run-python-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get build artifacts
+        uses: actions/download-artifact@v3
+      - name: deploy
+        run: echo "deploying....."
+
 #      - name: run test cases
 #        run: |
 #          pytest -v -s tests/
