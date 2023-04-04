@@ -29,7 +29,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
+
+      - name: upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact-files
+          path: |
+            dist
+            package.json  
       
 
   run-test:
@@ -55,13 +62,7 @@ jobs:
         run: |
           pytest -s -v tests/
 
-      - name: upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: artifact-files
-          path: |
-            dist
-            package.json
+      
 
   allure-report:
 
