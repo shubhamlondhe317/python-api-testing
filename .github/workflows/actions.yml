@@ -25,8 +25,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-#      - name: Setup python and install dependencies
-#        uses: ./.github/actions/install-dep
+      - name: upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact-files
+          path: docs
 
       - name: Run Test
         if: always()
