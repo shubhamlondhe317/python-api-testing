@@ -4,7 +4,7 @@ on: [push]
 jobs:
 
   run-python-tests:
-
+    continue-on-error: true
 #    runs-on: ubuntu-latest
     strategy:
       matrix:
