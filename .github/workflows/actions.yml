@@ -1,4 +1,4 @@
-name: Adding Artifacts.
+name: Download Artifacts.
 on:
 #  [push, workflow_dispatch]
   push:
@@ -63,6 +63,11 @@ jobs:
         run: |
           pytest -s -v tests/
 
+      - name: Download artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts-files
+          path: docs
       
 
   allure-report:
@@ -111,3 +116,4 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
+
