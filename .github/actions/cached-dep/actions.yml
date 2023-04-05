@@ -1,0 +1,16 @@
+name: 'Get and Cache Dependencies'
+description: 'This setup Python and Install the required cached-dep'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install cached-dep
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+      shell: bash
