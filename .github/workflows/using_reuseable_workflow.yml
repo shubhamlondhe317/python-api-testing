@@ -5,18 +5,10 @@ jobs:
 
   run-python-tests:
     continue-on-error: true
-#    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.7, 3.9]
-        operating-system: [ubuntu-latest]
-        include:
-          - python-version: 3.10
-            operating-system: windows-latest
-        exclude:
-          - python-version: 3.8
-            operating-system: ubuntu-latest
-    runs-on: ${{ matrix.operating-system }}
+        python-version: [3.8]
     steps:
 
       - name: Check out code
