@@ -76,6 +76,6 @@ jobs:
         run: echo "deploying....."
 
   deploy:
-    needs: build
+    needs: run-python-tests
     uses: ./.github/workflows/reuseable_workflow.yml
 
