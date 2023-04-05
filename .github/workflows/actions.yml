@@ -64,7 +64,7 @@ jobs:
           pytest -s -v tests/
 
       - name: Download artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: build-artifacts-files
           path: docs
