@@ -11,11 +11,11 @@ jobs:
         python-version: [3.8, 3.7, 3.9]
         operating-system: [ubuntu-latest]
         include:
-          python-version: 3.10
-          operating-system: windows-latest
+          - python-version: 3.10
+            operating-system: windows-latest
         exclude:
-          python-version: 3.8
-          operating-system: ubuntu-latest
+          - python-version: 3.8
+            operating-system: ubuntu-latest
     runs-on: ${{ matrix.operating-system }}
     steps:
 
