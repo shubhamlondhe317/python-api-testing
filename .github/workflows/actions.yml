@@ -1,4 +1,4 @@
-name: Download Artifacts.
+name: Adding custom actions.
 on:
 #  [push, workflow_dispatch]
   push:
