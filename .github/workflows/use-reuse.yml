@@ -1,4 +1,4 @@
-name: Adding custom actions.
+name: Workflow reuse.
 on:
 #  [push, workflow_dispatch]
   push:

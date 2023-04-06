@@ -1,5 +1,5 @@
 name: 'Get and Cache Dependencies'
-description: 'This setup Python and Install the required cached-dep'
+description: 'Setup Python and Install the required cached-deps'
 runs:
   using: 'composite'
   steps:
