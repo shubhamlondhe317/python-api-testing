@@ -32,6 +32,8 @@ jobs:
   deploy:
     needs: Build
     uses: ./.github/workflows/reusable.yml
+    with:
+      artifact-name: artifact-files
 
   run-test:
 
