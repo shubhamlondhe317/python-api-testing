@@ -1,5 +1,5 @@
 name: using reuseable workflow
-on: [push]
+on: [workflow_dispatch]
 
 jobs:
 
