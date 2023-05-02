@@ -1,15 +1,15 @@
 name: Adding custom actions.
 on: #[workflow_dispatch]
-  [push, workflow_dispatch]
-#  push:
-#    branches: [pytest-framework]
+#  [push, workflow_dispatch]
+  push:
+    branches: [pytest-framework]
 #  workflow_dispatch:
 
 jobs:
 
   Build:
 
-    runs-on: ["self-hosted", "test"]
+    runs-on: ["self-hosted"]
     strategy:
       matrix:
         python-version: [3.8]
