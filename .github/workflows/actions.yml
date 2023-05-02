@@ -1,9 +1,9 @@
 name: Adding custom actions.
 on: #[workflow_dispatch]
   [push, workflow_dispatch]
+
 #  push:
 #    branches: [pytest-framework]
-#
 #  workflow_dispatch:
 
 jobs:
