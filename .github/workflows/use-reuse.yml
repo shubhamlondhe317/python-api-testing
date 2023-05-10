@@ -3,7 +3,6 @@ on: [workflow-dispatch]
 #  [push, workflow_dispatch]
 #  push:
 #    branches: [pytest-framework]
-#
 #  workflow_dispatch:
 
 jobs:
