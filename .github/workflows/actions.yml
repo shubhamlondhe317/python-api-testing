@@ -1,9 +1,8 @@
 name: Adding custom actions.
-on: #[workflow_dispatch]
-#  [push, workflow_dispatch]
+on:
   push:
     branches: [pytest-framework]
-#  workflow_dispatch:
+
 
 jobs:
 
@@ -106,3 +105,8 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
 
+  Information:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run custom action
+        uses: ./.github/actions/deploy-s3-javascript
