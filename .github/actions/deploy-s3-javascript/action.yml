@@ -1,16 +1,5 @@
-name: 'Deploy to AWS s3'
-description: 'Deploy via s3'
-inputs:
-  bucket:
-    description: 'The s3 bucket name'
-    required: true
-  bucket_region:
-    description: 'The region of the s3 bucket'
-    required: false
-    default: 'us-east-1'
-  dist_folder:
-    description: 'The folder containing the deployable files'
-    required: true
+name: 'javascript custom actions'
+description: 'Deploy by using javascript custom actions'
 
 runs:
   using: 'node16'
