@@ -79,7 +79,7 @@ jobs:
       - name: Run custom action
         uses: ./.github/actions/deploy-s3-javascript
 
-  Docker Run:
+  Docker-Run:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
