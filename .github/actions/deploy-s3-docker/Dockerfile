@@ -5,4 +5,4 @@ FROM alpine:3.10
 COPY deployment.py /deployment.py
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-CMD ["./deployment.py"]
+CMD ["/deployment.py"]
