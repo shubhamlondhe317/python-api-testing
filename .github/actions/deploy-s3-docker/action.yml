@@ -1,0 +1,6 @@
+name: 'Docker custom actions'
+description: 'Deploy by using Docker custom actions'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
