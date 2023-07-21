@@ -47,7 +47,6 @@ py==1.10.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.1
 Pygments==2.11.2
-PyGObject==3.42.1
 PyHamcrest==2.0.2
 PyJWT==2.3.0
 pyOpenSSL==21.0.0
