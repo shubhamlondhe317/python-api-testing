@@ -1,0 +1,6 @@
+name: 'javascript custom actions'
+description: 'Deploy by using javascript custom actions'
+
+runs:
+  using: 'node16'
+  main: 'main.js'
